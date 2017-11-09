@@ -1,0 +1,10 @@
+.idea
+/vendor
+.*_cache
+build_*
+node_modules
+source/js
+source/css
+source/img
+source/manifest.json
+yarn-error.log

@@ -1,0 +1,16 @@
+{
+    "name": "tapestry/pure-blog-theme",
+    "description": "A starter theme for use with Tapestry",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Dann",
+            "email": "simon.dann@gmail.com"
+        }
+    ],
+    "require": {
+        "tapestry-cloud/tapestry": "dev-develop-1.0.11",
+        "tapestry-cloud/asset-plugin": "^1.0"
+    }
+}
