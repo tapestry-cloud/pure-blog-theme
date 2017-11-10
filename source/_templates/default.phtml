@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title><?= (isset($title) ? ($title . ' &mdash; ' . $this->site('title')) : $this->site('title')); ?></title>
+
+    <meta name="description" content="<?= $this->site('description') ?>">
+    <meta name="generator" content="tapestry.cloud"/>
+
+    <link rel="canonical" href="<?= $this->getUrl() ?>" />
+    <link rel="stylesheet" type="text/css" href="<?= $this->asset('main.css') ?>" />
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<main role="main">
+    <?= $this->section('content') ?>
+</main>
+<script async type="application/javascript" src="<?= $this->asset('main.js') ?>"></script>
+</body>
+</html>
