@@ -19,6 +19,13 @@
 
 <body>
 <main role="main">
+
+    <header>
+        <h1>
+            <a href="<?= $this->url('/') ?>"><?= $this->site('title') ?></a>
+        </h1>
+    </header>
+
     <?= $this->section('content') ?>
 </main>
 <script async type="application/javascript" src="<?= $this->asset('main.js') ?>"></script>

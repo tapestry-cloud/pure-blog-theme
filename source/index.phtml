@@ -6,4 +6,21 @@ use:
 - blog_categories
 ---
 
-<p>@todo finish this</p>
+<section>
+    <?php
+    /**
+     * @var \Tapestry\Entities\ViewFile[] $blog_items
+     * @var \Tapestry\Entities\ViewFile $item
+     */
+    foreach (array_slice($blog_items, 0, 6) as $item) {
+        $tags = blog_tag_list($item->taxonomyList('tags')); ?>
+        <article class="list">
+            <time pubdate date="<?= $item->getData('date')->format('Y-m-d') ?>"><?= $item->getData('date')->format('F jS Y') ?></time>
+            <?= (!is_null($tags)) ? " <span class=\"split\">///</span> <span class=\"tags\">$tags</span>" : '' ?>
+            <br>
+            <a href="<?= $item->getUrl() ?>">
+                <h1><?= $item->getData('title') ?></h1>
+            </a>
+        </article>
+    <?php } ?>
+</section>

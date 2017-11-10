@@ -1,1 +1,79 @@
 @import (inline) "../../../node_modules/normalize.css/normalize.css";
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Nunito');
+
+@dark: #202024;
+@light: #fafaf8;
+@brand: #ff331f;
+@keyline: #e0e0e0;
+
+body, html {
+  font-family: 'Alegreya', serif;
+  color: @dark;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  color: @dark;
+  text-decoration: none;
+  &:hover {
+    color: @brand;
+  }
+}
+
+main {
+  width: 900px;
+  margin: 2rem auto;
+
+  & > header {
+    border-bottom: 2px solid @brand;
+    margin-bottom: 2rem;
+
+    h1 {
+      margin: 0 0 .5rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  article.list {
+    margin: 1rem 0;
+
+    h1 {
+      letter-spacing: .04rem;
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    span.split{
+      color: @keyline;
+    }
+
+    span.tags, span.tags a, time{
+      color: lighten(@dark, 40%);
+    }
+    span.tags a:hover{
+      text-decoration: underline;
+    }
+  }
+
+  article{
+    header{
+      margin-bottom: 2rem;
+      h1{
+        margin: 0 0 .5rem;
+      }
+
+      .tags{
+        color: @keyline;
+        a{
+          color: lighten(@dark, 40%);
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

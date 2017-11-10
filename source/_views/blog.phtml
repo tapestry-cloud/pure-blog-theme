@@ -1,0 +1,26 @@
+---
+layout: default
+
+generator:
+- CollectionItemGenerator
+---
+<?php
+/**
+ * @var \Tapestry\Entities\Pagination $previous_next
+ * @var string $title
+ * @var string $content
+ * @var \Tapestry\Entities\ViewFileTrait|\Tapestry\Plates\Template $this
+ */
+$tags = blog_tag_list($this->taxonomyList('tags'));
+?>
+<article>
+    <header>
+        <h1><?= $title ?></h1>
+        <?php if (!is_null($tags)) { ?>
+        <span class="tags"><?= $tags ?></span>
+        <?php } ?>
+    </header>
+    <div>
+        <?= $this->getContent() ?>
+    </div>
+</article>

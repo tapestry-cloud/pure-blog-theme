@@ -70,7 +70,7 @@ module.exports = (env = {}) => {
             ExtractLESS,
             new ManifestPlugin(),
             new WebpackShellPlugin({
-                onBuildEnd: ['php ./vendor/tapestry-cloud/tapestry/bin/tapestry.php build --quiet' + ((isProduction) ? ' --env=production' : '') ]
+                onBuildEnd: ['php ./vendor/tapestry-cloud/tapestry/bin/tapestry.php build --clear --quiet' + ((isProduction) ? ' --env=production' : '') ]
             }),
             new CopyWebpackPlugin([{
                 from: __dirname + "/source/_assets/img/",
